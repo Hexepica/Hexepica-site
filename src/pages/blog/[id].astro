@@ -1,0 +1,60 @@
+---
+import BlogDetails from '../../components/Blog/BlogDetails.jsx';
+import FormNavbar from '../../components/Navbar/FormNavbar.jsx';
+import '../../pages/index.css';
+
+export async function getStaticPaths() {
+	// This matches the blog data from the Blog component
+	const blogPaths = [
+		{
+			id: 1,
+			title: "AI in Healthcare: Transforming Care for Patients",
+			genre: "Healthcare",
+			readTime: "10 mins"
+		},
+		{
+			id: 2,
+			title: "The Future of Web Development: What to Expect",
+			genre: "Technology",
+			readTime: "8 mins"
+		},
+		{
+			id: 3,
+			title: "Digital Transformation: A Guide for Modern Businesses",
+			genre: "Business",
+			readTime: "12 mins"
+		},
+		{
+			id: 4,
+			title: "Machine Learning: Revolutionizing Industries",
+			genre: "AI",
+			readTime: "15 mins"
+		}
+	];
+
+	return blogPaths.map(blog => ({
+		params: { id: blog.id.toString() },
+		props: { blogData: blog }
+	}));
+}
+
+const { id } = Astro.params;
+const { blogData } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{blogData.title} - Hexepica</title>
+		<meta name="description" content={`Read about ${blogData.title}. A ${blogData.readTime} read about ${blogData.genre}.`} />
+	</head>
+	<body>
+		<FormNavbar client:load />
+		<main>
+			<BlogDetails blogId={id} client:load />
+		</main>
+	</body>
+</html> 

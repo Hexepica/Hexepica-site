@@ -1,0 +1,195 @@
+.contact{
+    width: 100%;
+    padding: clamp(2rem, 4vw, 4rem) 0;
+}
+
+.contact .header-description{
+    max-width: 45.7rem;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+}
+
+.contact-section{
+    max-width: 77.5rem;
+    width: 100%;
+    background: #F3F3F3;
+    margin: clamp(2rem, 5vw, 5rem) auto;
+    padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 2vw, 2rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: clamp(2rem, 4vw, 4rem);
+    border-radius: clamp(20px, 3vw, 30px);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-left{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    margin: clamp(0.75rem, 1vw, 1rem) 0;
+}
+
+.input label{
+    color: #000;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
+    font-weight: 500;
+}
+
+.input input{
+    padding: clamp(0.75rem, 1vw, 1rem);
+    margin: clamp(0.25rem, 0.5vw, 0.5rem) 0;
+    border-radius: clamp(10px, 1.5vw, 15px);
+    border: 1px solid #ccc;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.input input:focus,
+.input textarea:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.input textarea{
+    height: clamp(8rem, 10vw, 10rem);
+    padding: clamp(0.75rem, 1vw, 1rem);
+    margin: clamp(0.25rem, 0.5vw, 0.5rem) 0;
+    border-radius: clamp(10px, 1.5vw, 15px);
+    border: 1px solid #ccc;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    resize: vertical;
+    background: #fff;
+    transition: all 0.3s ease;
+    min-height: 8rem;
+}
+
+.contact-right{
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 140%;
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contact-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: right center;
+}
+
+.button.read-more-btn {
+    margin: clamp(1rem, 1.5vw, 1.5rem) 0;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* Extra large screens */
+@media (min-width: 1921px) {
+    .contact-section {
+        max-width: 90rem;
+    }
+}
+
+/* Large desktop screens */
+@media (max-width: 1400px) {
+    .contact-section {
+        max-width: 90%;
+    }
+}
+
+/* Medium desktop screens */
+@media (max-width: 1200px) {
+    .contact-section {
+        gap: 2rem;
+    }
+
+    .contact-left {
+        flex-basis: 60%;
+    }
+
+    .contact-right {
+        width: 40%;
+    }
+}
+
+/* Small desktop and tablet landscape */
+@media (max-width: 1024px) {
+    .contact-left {
+        flex-basis: 65%;
+    }
+
+    .contact-right {
+        width: 35%;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+        margin: 2rem auto;
+        gap: 2rem;
+        overflow: visible;
+        padding-bottom: 2rem;
+    }
+
+    .contact-left {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .contact-right {
+        display: none;
+    }
+}
+
+/* Large mobile */
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .input label {
+        font-size: 0.875rem;
+    }
+
+    .input input,
+    .input textarea {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 10px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+    .contact-section {
+        padding: 1.25rem 0.75rem;
+        margin: 1.5rem auto;
+    }
+
+    .input {
+        margin: 0.5rem 0;
+    }
+}

@@ -1,0 +1,71 @@
+---
+import './Navbar.css';
+---
+
+<nav role="navigation" aria-label="Main Navigation">
+  <a href="#hero" class="logo">
+    <img src="/assets/logo.svg" alt="Logo" />
+    <img src="/assets/logo-text.svg" alt="Logo Text" />
+  </a>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <button
+    class="nav-menu-btn"
+    id="nav-toggle"
+    aria-label="Toggle navigation menu"
+    aria-expanded="false"
+  >
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</nav>
+
+<script>
+  function initNav() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      if (!navToggle || !navLinks) return;
+
+      isMenuOpen = !isMenuOpen;
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isMenuOpen.toString());
+      document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
+    }
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', toggleMenu);
+
+      navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (isMenuOpen) toggleMenu();
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (
+          isMenuOpen &&
+          navToggle &&
+          navLinks &&
+          !(navToggle.contains(e.target as Node)) &&
+          !(navLinks.contains(e.target as Node))
+        ) {
+          toggleMenu();
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initNav);
+  document.addEventListener('astro:page-load', initNav);
+</script>

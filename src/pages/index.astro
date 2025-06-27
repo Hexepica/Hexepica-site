@@ -1,5 +1,13 @@
 ---
-
+import './index.css';
+import Navbar from '../components/Navbar/Navbar.astro';
+import Hero from '../components/Hero/Hero';
+import Methodology from '../components/Methodology/Methodology';
+import About from '../components/About/About';
+import Services from '../components/Services/Services';
+import Blog from '../components/Blog/Blog';
+import Contact from '../components/Contact/Contact';
+import Footer from '../components/Footer/Footer';
 ---
 
 <html lang="en">
@@ -11,6 +19,13 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navbar />
+		<Hero client:load />
+		<Methodology client:load />
+		<About client:load />
+		<Services client:load />
+		<Blog client:load />
+		<Contact client:load />
+		<Footer />
 	</body>
 </html>
