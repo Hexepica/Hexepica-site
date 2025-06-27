@@ -1,37 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { blogData } from '../../utils/blogData';
 import './Blog.css';
 import { animateBlog } from '../../utils/gsapAnimations';
-
-const blogData = [
-    {
-        id: 1,
-        image: "/assets/blog-img.svg",
-        readTime: "10 mins",
-        genre: "Healthcare",
-        title: "AI in Healthcare: Transforming Care for Patients"
-    },
-    {
-        id: 2,
-        image: "/assets/blog-img.svg",
-        readTime: "8 mins",
-        genre: "Technology",
-        title: "The Future of Web Development: What to Expect"
-    },
-    {
-        id: 3,
-        image: "/assets/blog-img.svg",
-        readTime: "12 mins",
-        genre: "Business",
-        title: "Digital Transformation: A Guide for Modern Businesses"
-    },
-    {
-        id: 4,
-        image: "/assets/blog-img.svg",
-        readTime: "15 mins",
-        genre: "AI",
-        title: "Machine Learning: Revolutionizing Industries"
-    }
-];
 
 const Blog = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -250,8 +220,8 @@ const Blog = () => {
                          style={{ transform: transformValue }}>
                         {blogData.map((blog, index) => (
                             <div 
-                                className={`blog-card ${index === currentIndex || index === currentIndex + 1 ? 'active' : ''}`}
                                 key={blog.id}
+                                className={`blog-card ${index === currentIndex || index === currentIndex + 1 ? 'active' : ''}`}
                                 onClick={() => handleBlogClick(blog.id)}
                                 onMouseMove={(e) => !isDragging && handleMouseMove(e, e.currentTarget)}
                                 onMouseEnter={(e) => !isDragging && handleMouseEnter(e)}
@@ -262,10 +232,10 @@ const Blog = () => {
                                 </div>
 
                                 <div className="blog-middle">
-                                    <div className="blog-time">
+                                    {/* <div className="blog-time">
                                         <img src="/assets/clock.svg" alt="Read time" />
                                         <p>{blog.readTime}</p>
-                                    </div>
+                                    </div> */}
                                     
                                     <button className='blog-genre'>{blog.genre}</button>
                                 </div>

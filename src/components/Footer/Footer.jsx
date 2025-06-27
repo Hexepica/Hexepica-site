@@ -50,8 +50,8 @@ const Footer = () => {
                     </p>
 
                     <p className="description">
-                        Phone: +91 93615 39596,<br />
-                        +91 95974 49955
+                        Phone: +91 93615 39596 | +91 95974 49955
+                       
                     </p>
 
                     <p className="description">
