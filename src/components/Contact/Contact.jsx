@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Contact.css';
-import { animateContact } from '../../utils/gsapAnimations';
+import { animateContact } from '../../utils/gsapAnimations.mjs';
 
 const Contact = () => {
     const contactRef = useRef(null);

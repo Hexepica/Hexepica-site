@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Footer.css';
-import { animateFooter } from '../../utils/gsapAnimations';
+import { animateFooter } from '../../utils/gsapAnimations.mjs';
 
 const Footer = () => {
     const footerRef = useRef(null);
@@ -30,13 +30,13 @@ const Footer = () => {
 
                 <div className="footer-social">
                     <div className="circle">
-                        <img src="/assets/insta.svg" alt="Instagram" />
+                        <a href="https://www.instagram.com/hexepica_technologies/" target='_blank'><img src="/assets/insta.svg" alt="Instagram" /></a>
                     </div>
                     <div className="circle">
-                        <img src="/assets/linkedin.svg" alt="LinkedIn" />
+                        <a href="https://www.linkedin.com/company/hexepica-technologies" target='_blank'><img src="/assets/linkedin.svg" alt="LinkedIn" /></a>
                     </div>
                     <div className="circle">
-                        <img src="/assets/x.svg" alt="X (Twitter)" />
+                        <a href="https://x.com/hexepica" target='_blank'><img src="/assets/x.svg" alt="X (Twitter)" /></a>
                     </div>
                 </div>
             </div>

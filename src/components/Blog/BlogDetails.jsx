@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getBlogById, getRelatedBlogs } from '../../utils/blogData';
+import { getBlogById, getRelatedBlogs } from '../../utils/blogData.mjs';
 import './BlogDetails.css';
 
 const BlogDetails = ({ blogId }) => {

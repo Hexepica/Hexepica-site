@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { blogData } from '../../utils/blogData';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { blogData } from '../../utils/blogData.mjs';
 import './Blog.css';
-import { animateBlog } from '../../utils/gsapAnimations';
+import { animateBlog } from '../../utils/gsapAnimations.mjs';
 
 const Blog = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

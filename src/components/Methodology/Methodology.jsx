@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Methodology.css';
-import { animateMethodology } from '../../utils/gsapAnimations';
+import { animateMethodology } from '../../utils/gsapAnimations.mjs';
 
 const Methodology = () => {
     const methodologyRef = useRef(null);

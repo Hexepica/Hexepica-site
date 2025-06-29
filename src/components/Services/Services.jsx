@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Services.css';
-import { animateServices } from '../../utils/gsapAnimations';
+import { animateServices } from '../../utils/gsapAnimations.mjs';
 
 const Services = () => {
 
@@ -77,7 +77,7 @@ const Services = () => {
                     </div>
 
                     <div className="service-right">
-                        <img src="/assets/web-dev.svg" alt="" />
+                        <img src="/assets/seo.svg" alt="" />
                     </div>
 
                     {/* <div className="learn-more">

@@ -1,8 +1,8 @@
 ---
 import BlogDetails from '../../components/Blog/BlogDetails.jsx';
 import FormNavbar from '../../components/Navbar/FormNavbar.jsx';
-import { blogData } from '../../utils/blogData';
-import '../../pages/index.css';
+import { blogData } from '../../utils/blogData.mjs';
+import '../../pages/_index.css';
 
 export async function getStaticPaths() {
 	return blogData.map(blog => ({
