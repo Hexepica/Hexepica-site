@@ -224,6 +224,10 @@
 }
 
 .related-blogs .arrow-circle:first-child img {
+    transform: rotate(0deg);
+}
+
+.related-blogs .arrow-circle:nth-child(2) img {
     transform: rotate(180deg);
 }
 

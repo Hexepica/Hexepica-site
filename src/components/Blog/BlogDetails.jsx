@@ -116,7 +116,7 @@ const BlogDetails = ({ blogId }) => {
                 <div className="blog-text-content" dangerouslySetInnerHTML={{ __html: blog.content }} />
             </div>
 
-            <div className="blog-details-footer">
+            {/* <div className="blog-details-footer">
                 <h3>Share this article</h3>
                 <div className="share-buttons large">
                     <a href="#" className="share-button">
@@ -132,7 +132,7 @@ const BlogDetails = ({ blogId }) => {
                         <span>Share on Instagram</span>
                     </a>
                 </div>
-            </div>
+            </div> */}
 
             {relatedBlogs.length > 0 && (
                 <div className="related-blogs">
