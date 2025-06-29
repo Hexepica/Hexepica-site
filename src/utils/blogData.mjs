@@ -26,7 +26,7 @@ export const blogData = [
         readTime: "8 mins",
         genre: "Technology",
         title: "The Future of Web Development: Trends to Watch in 2024",
-        author: "Jane Smith",
+        author: "Hexepica",
         date: "March 18, 2024",
         content: `
             <p>The web development landscape is constantly evolving, bringing new technologies, frameworks, and methodologies that shape how we build and interact with digital experiences. As we progress through 2024, several emerging trends are revolutionizing the field of web development.</p>
@@ -50,7 +50,7 @@ export const blogData = [
         readTime: "12 mins",
         genre: "Business",
         title: "Digital Transformation: A Guide for Modern Businesses",
-        author: "Sarah Johnson",
+        author: "Hexepica",
         date: "March 20, 2024",
         content: `
             <p>Digital transformation is no longer a luxury but a necessity for businesses looking to remain competitive in today's fast-paced market. This comprehensive guide explores the key aspects of digital transformation and how businesses can successfully navigate this journey.</p>
@@ -71,7 +71,7 @@ export const blogData = [
         readTime: "15 mins",
         genre: "AI",
         title: "Machine Learning: Revolutionizing Industries",
-        author: "Michael Chen",
+        author: "Hexepica",
         date: "March 22, 2024",
         content: `
             <p>Machine Learning is transforming industries across the board, from healthcare to finance, retail to manufacturing. This article explores how ML is driving innovation and creating new opportunities across different sectors.</p>

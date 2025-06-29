@@ -185,6 +185,16 @@
     color: var(--highlight-color);
 }
 
+.guidelines a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.guidelines a:hover {
+    color: var(--highlight-color);
+}
+
 /* Extra large screens */
 @media (min-width: 1921px) {
     .footer {

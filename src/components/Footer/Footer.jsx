@@ -73,7 +73,7 @@ const Footer = () => {
                 </p>
 
                 <p className="description guidelines">
-                    Privacy Policy
+                    <a href="/privacy">Privacy Policy</a>
                 </p>
             </div>
         </div>
